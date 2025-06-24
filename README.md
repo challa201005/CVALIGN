@@ -1,79 +1,52 @@
-# CVALIGN
----
+## 📌 Overview
 
-# CV Evaluator Website
-
-### Problem Statement
-
-Manual CV screening is time-consuming, inconsistent, and prone to bias. Recruiters struggle to efficiently identify the best candidates among hundreds of applications.
-
-### Goal
-
-Create a web platform that automates CV evaluation against job role descriptions using an AI Retrieval-Augmented Generation (RAG) model. It scores CVs for relevance and generates personalized feedback to assist hiring decisions.
-
-### Features
-
-* Upload job descriptions detailing required skills and qualifications
-* Upload and parse CVs in PDF/DOCX formats
-* Automated relevance scoring of CVs
-* Personalized feedback on strengths, weaknesses, and fit
-* Dashboard showing ranked candidates with filtering and comparison
-* Role-based access control for different user types (recruiters, managers, admins)
-* Cloud storage integration for uploaded CVs
-
-### Tech Stack
-
-* **Backend:** Python (FastAPI, PyTorch, Hugging Face Transformers, LangChain)
-* **Vector Database:** Pinecone or FAISS
-* **Frontend:** Basic HTML/CSS (React planned for future)
-* **Storage:** Cloudinary or similar cloud storage
-
-### Setup Instructions
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repo_url>
-   cd AI-Resume-Analyzer
-   ```
-
-2. **Create and activate a virtual environment**
-
-   ```bash
-   python -m venv venvapp
-   # On Windows:
-   .\venvapp\Scripts\activate
-   # On macOS/Linux:
-   source venvapp/bin/activate
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Set up the database**
-
-   * Create a MySQL database named `cv`
-   * Update database credentials in `App/App.py` (Line 95):
-
-     ```python
-     connection = pymysql.connect(host='localhost', user='root', password='your_password', db='cv')
-     ```
-
-5. **Replace the custom `resume_parser.py`**
-
-   * Copy the provided `resume_parser.py` to `venvapp\Lib\site-packages\pyresparser`
-
-6. **Run the app**
-
-   ```bash
-   streamlit run App/App.py
-   ```
-
-7. **Access the app**
-
-   Open [http://localhost:8501](http://localhost:8501) in your browser.
+**CVALIGN** is an open-source developer tool designed to **automate candidate screening** by enabling resume uploads, parsing, and relevance scoring against job descriptions. It leverages **AI-driven assessments** and provides **personalized feedback**, streamlining the recruitment workflow.
 
 ---
+
+## 💡 Why CVALIGN?
+
+CVALIGN simplifies talent acquisition using advanced **NLP**, **AI evaluation**, and **interactive visualizations**. Its core features include:
+
+- **🤖 AI-Powered Relevance Scoring**: Automatically assesses resumes against job descriptions for faster, smarter screening.
+- **📄 Resume Parsing**: Extracts key candidate data like skills, education, and contact info using NLP.
+- **📊 Interactive Dashboards**: Visualize candidate insights and recruitment metrics via **Streamlit** interfaces.
+- **🔗 Seamless Integration**: Connects user actions to backend AI models, databases, and role-based access.
+- **⚙️ Easy Setup & Reproducibility**: Uses `requirements.txt` for dependable, environment-managed setup.
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- **Python**
+- **Pip** (Python package manager)
+
+---
+
+### 🛠️ Installation
+
+Clone and set up the project:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/challa201005/CVALIGN
+
+# 2. Navigate to the project directory
+cd CVALIGN
+
+# 3. Install dependencies
+pip install -r App/requirements.txt
+📌 Usage
+To run the app (replace {entrypoint} with your actual file name):
+
+bash
+Copy code
+python {entrypoint}
+🧪 Testing
+CVALIGN uses {test_framework} for testing. To run the test suite:
+
+bash
+Copy code
+pytest
